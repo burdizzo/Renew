@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+     <title>Eco Tourist App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- Add Phonegap scripts -->
+    <script type="text/javascript" src="./js/cordova.js"></script>
+
+    <!-- Add jQuery mobile CSS -->
+    <link rel="stylesheet" href="./css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="./css/jquery.mobile.structure-1.4.0.min.css">
+ 	<link rel="stylesheet" href="./css/themes/EcoTouristIRL.min.css" />
+	<link rel="stylesheet" href="./css/mycss.css">
+    
+     <!-- Adding jQuery & jQuery mobile   -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnDhtYB-3OWwl1BclRpaB7NOKmot8sg-s&sensor=true"></script>
+   	<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./js/jquery.mobile-1.4.0.js"></script>
+    <script type="text/javascript" src="./js/myJavaScript.js"></script>
+  	<script type="text/javascript" src="./js/jquery.ui.map.js"></script>
+       
+      
+ </head>
+ <body onload="init();">
+ 	<!--Page one wrapper -->
+    <div data-role="page" id="landingmap">
+     
+       <!--Hidden menu panel-->
+       <div data-role="panel" id="menu" data-theme="a" data-position-fixed="true"  data-display="overlay">
+        	<ul data-role="listview" data-theme="a">
+            	<li data-icon="delete"><a href="#pageone" data-rel="close">Close</a></li>
+            	<li data-icon="back"><a href="#pagetwo" data-rel="back">Demo intro</a></li>
+       		</ul>
+       </div>
+       <!--End of hidden menu panel-->
+    
+      <!--Header-->
+      <div data-role="header"  data-position="fixed" data-fullscreen="false" data-tap-toggle="false">
+        <h1>Eco Tourist IRL</h1>
+          <a href="#menu" data-role="button"
+            data-iconshadow="false"
+            data-corners="false"
+            data-theme="a"
+            data-icon="homeicon">
+       	  </a>
+       </div>
+       <!--Header End-->
+        
+       <!--Content-->  
+       <div data-role="content" style="width:100%; height:100%; padding:0;">
+             <div id="mapcanvas" style="width:100%; height:100%; position:absolute;"></div>                 
+       </div>
+        <!--Content End-->  
+
+ 	  <!--Footer-- 
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>>
+      <!--Footer End--> 
+      
+</div> 
+<!--Page One Wrapper End-->
+	
+    <div data-role="page" id="gmap">
+      <div data-role="header">
+        <h1>My Map</h1>
+      </div>
+    
+      <div data-role="content" >
+       
+        <a href="#pageone">Go to Page One</a>
+      </div>
+    
+      <div data-role="footer">
+        <h1>Footer Text</h1>
+      </div>
+</div> 
+
+  </body>
+</html>
